@@ -1,0 +1,20 @@
+<% layout('./layout') %>
+<style>
+.content {
+    max-width: 80%;
+}
+</style>
+<% it.podcasts.forEach((podcast) => {%>
+<div class="card" stlye="max-width: 30%">
+    <div class="card__header">
+        <p class="font-bold px-3"><%= podcast.title %></p>
+    </div>
+    <div class="content">
+        <p><%= podcast.summary %></p>
+    </div>
+    <div class="card__footer level content"><%= podcast.episode_count %> Episodes</div>
+    <div class="card__action-bar u-pull-right">
+        <a class="outline border-indigo-400 text-indigo-400 btn" href="/podcast/<%= podcast.id %>/episodes">Episode List</a>
+    </div>
+</div>
+<%})%>

@@ -1,0 +1,34 @@
+{
+  "name": "podcatch",
+  "version": "1.0.0",
+  "description": "A backend webapp to list podcast episodes",
+  "main": "index.js",
+  "author": "Mottel Zirkind",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "npx eslint index.js routers/** models/**",
+    "lint:fix": "npx eslint --fix index.js routers/** models/**"
+  },
+  "nodemonConfig": {
+    "ext": "js,eta,json",
+    "watch": [
+      "index.js",
+      "routers/**",
+      "models/**",
+      "pages/**"
+    ]
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.2.0",
+    "cors": "^2.8.5",
+    "eta": "^2.0.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
+}
